@@ -1,13 +1,12 @@
-from numba import cuda, njit
-import numpy, math, sys
-from random import uniform, random
-from timeit import default_timer as timer
+from random import uniform
 
+import math
+import numpy
 import pygame
 from OpenGL.GL import *
 from OpenGL.GLU import *
 from numba import *
-from pygame.locals import *
+from numba import cuda
 
 lastPosX = 0
 lastPosY = 0
@@ -33,7 +32,7 @@ def initializeArrays(number, distance):
 
 		x = uniform(-distance, distance)
 		y = uniform(-distance, distance)
-		z = uniform(-20, 20)
+		z = uniform(-5, 5)
 
 		vertices[i] = [x,y,z]
 
