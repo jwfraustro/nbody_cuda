@@ -3,6 +3,7 @@ from random import uniform
 
 import numpy
 import pygame
+from pygame.locals import *
 from OpenGL.GL import *
 from OpenGL.GLU import *
 from numba import *
@@ -184,6 +185,9 @@ def main():
 					PAUSE = not PAUSE
 				elif event.key == pygame.K_r:
 					A, V, B = initializeParticles(PARTICLES, RADIUS)
+
+				elif event.key == pygame.K_s:
+					pygame.image.save()
 
 			if event.type == pygame.MOUSEMOTION:
 				x, y = event.pos
